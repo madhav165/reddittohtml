@@ -18,7 +18,6 @@ public class RedditRead {
             url = sc.next();
 
             Document doc = Jsoup.connect(url).timeout(5000).get();
-
             String title = doc.title();
             WriteToHTMLFile hf = new WriteToHTMLFile(title.replace("/"," ")+".html");
             hf.clearFile();
