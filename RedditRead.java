@@ -20,8 +20,7 @@ public class RedditRead {
             Document doc = Jsoup.connect(url).get();
 
             String title = doc.title();
-            WriteToHTMLFile hf = new WriteToHTMLFile(title.replace("/"," ").replace("?", " ")+".html");
-            //WriteToHTMLFile hf = new WriteToHTMLFile(title.split(" :")[0]+".html");
+            WriteToHTMLFile hf = new WriteToHTMLFile(title.replace("/"," ")+".html");
             hf.clearFile();
             hf.insertLine("<!DOCTYPE html>\n<html>\n<head>");
             hf.insertLine("<title>"+title+"</title>");
@@ -40,6 +39,7 @@ public class RedditRead {
             System.out.println("Conversion successful");
         }
         catch (IOException e) {
+            //e.printStackTrace();
             System.out.println("Oops! Some files are missing.");
         }
         catch (NullPointerException e) {
