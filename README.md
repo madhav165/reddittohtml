@@ -9,7 +9,10 @@ On UNIX:
 4) Run with java -cp .:$PATH_TO_FOLDER/jsoup-1.9.2.jar:$PATH_TO_FOLDER RedditRead
 
 On Windows:
-Run with java -cp .;$PATH_TO_FOLDER/jsoup-1.9.2.jar;$PATH_TO_FOLDER RedditRead
+1) Create folder 'git' in your home directory
+2) Run the command 'git clone https://github.com/madhav165/reddittohtml.git'
+3) Change to the newly created directory
+4) Run with java -cp .;$PATH_TO_FOLDER/jsoup-1.9.2.jar;$PATH_TO_FOLDER RedditRead
 
 Linux users may be able to add a shortcut to the run command as follows:
 1) Open ~/.bash_aliases
