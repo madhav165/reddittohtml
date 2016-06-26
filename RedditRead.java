@@ -17,7 +17,7 @@ public class RedditRead {
             System.out.print("Enter URL: ");
             url = sc.next();
 
-            Document doc = Jsoup.connect(url).timeout(5000).get();
+            Document doc = Jsoup.connect(url).userAgent("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2774.3 Safari/537.36").get();
             String title = doc.title();
             WriteToHTMLFile hf = new WriteToHTMLFile(title.replace("/"," ")+".html");
             hf.clearFile();
